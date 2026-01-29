@@ -21,13 +21,14 @@ export const Navbar = () => {
                         <a href="#services" className="text-gray-600 hover:text-brand-dark font-medium transition-colors">שירותים</a>
                         <a href="#why-us" className="text-gray-600 hover:text-brand-dark font-medium transition-colors">למה אנחנו</a>
                         <a href="#contact" className="text-gray-600 hover:text-brand-dark font-medium transition-colors">צור קשר</a>
-                        <a
+                        <motion.a
                             href="tel:+972524580590"
+                            whileTap={{ scale: 0.95 }}
                             className="bg-brand-dark text-white px-6 py-2.5 rounded-full font-medium hover:bg-gray-800 transition-all flex items-center gap-2 shadow-lg shadow-gray-900/20"
                         >
                             <Phone className="w-4 h-4" />
                             <span>052-4580590</span>
-                        </a>
+                        </motion.a>
                     </div>
 
                     {/* Mobile Menu Button */}

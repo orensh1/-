@@ -8,10 +8,11 @@ export const FloatingWhatsApp = () => {
             href="https://wa.me/972524580590"
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scale: 0.95 }}
             className="fixed bottom-24 left-6 md:bottom-8 md:left-8 z-40 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg shadow-green-500/30 flex items-center justify-center cursor-pointer group"
         >
             <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-75"></span>

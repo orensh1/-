@@ -1,11 +1,18 @@
 import React from 'react';
 import { Phone, MapPin, Mail, ArrowUp } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export const Footer = () => {
     return (
         <footer id="contact" className="bg-white border-t border-gray-100 pt-16 pb-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
+                >
                     <div>
                         <h3 className="text-2xl font-bold mb-6">שרון אינסטלציה</h3>
                         <p className="text-gray-600 mb-6 leading-relaxed">
@@ -56,16 +63,17 @@ export const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </motion.div>
 
                 <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-sm">© 2024 שרון אינסטלציה. כל הזכויות שמורות.</p>
-                    <button
+                    <motion.button
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        whileTap={{ scale: 0.95 }}
                         className="p-3 bg-gray-50 hover:bg-gray-100 rounded-full transition-colors group"
                     >
                         <ArrowUp className="w-5 h-5 text-gray-600 group-hover:-translate-y-1 transition-transform" />
-                    </button>
+                    </motion.button>
                 </div>
             </div>
         </footer>

@@ -80,24 +80,27 @@ export const Services = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => {
                         const Icon = service.icon;
+                        const isPriority = index < 2;
                         return (
                             <motion.div
                                 key={service.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="group rounded-2xl bg-white border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-brand-lime/10 transition-all duration-300 flex flex-col h-full"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+                                style={{ willChange: 'opacity, transform' }}
+                                className="group rounded-2xl bg-white border border-gray-100 overflow-hidden hover:shadow-lg hover:shadow-brand-lime/10 transition-shadow duration-300 flex flex-col h-full"
                             >
                                 <div className="h-48 overflow-hidden relative">
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
                                     <img
                                         src={service.image}
                                         alt={service.title}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        loading={isPriority ? "eager" : "lazy"}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform"
                                     />
                                     <div className="absolute bottom-4 right-4 z-20">
-                                        <div className="w-10 h-10 bg-brand-lime rounded-lg flex items-center justify-center shadow-lg">
+                                        <div className="w-10 h-10 bg-brand-lime rounded-lg flex items-center justify-center shadow-md">
                                             <Icon className="w-5 h-5 text-brand-dark" />
                                         </div>
                                     </div>

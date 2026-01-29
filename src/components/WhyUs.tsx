@@ -36,18 +36,19 @@ export const WhyUs = () => {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
                         <motion.h2
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
                             className="text-3xl lg:text-4xl font-bold mb-6"
                         >
                             למה לבחור ב<span className="text-brand-lime">שרון אינסטלציה?</span>
                         </motion.h2>
                         <motion.p
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
+                            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                             className="text-gray-400 text-lg mb-8 leading-relaxed"
                         >
                             עם ניסיון של מעל 15 שנה ואלפי לקוחות מרוצים, אנחנו מביאים סטנדרט חדש של שירות ואמינות לעולם האינסטלציה.
@@ -59,10 +60,10 @@ export const WhyUs = () => {
                                 return (
                                     <motion.div
                                         key={index}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
-                                        transition={{ delay: 0.2 + (index * 0.1) }}
+                                        transition={{ duration: 0.5, delay: 0.2 + (index * 0.1), ease: "easeOut" }}
                                         className="flex gap-4"
                                     >
                                         <div className="flex-shrink-0 mt-1">

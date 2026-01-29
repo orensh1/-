@@ -33,7 +33,7 @@ export const Hero = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
+                        transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                         className="text-5xl lg:text-7xl font-bold tracking-tight mb-8 text-gray-900 leading-[1.1]"
                     >
                         פתרונות אינסטלציה
@@ -43,7 +43,7 @@ export const Hero = () => {
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                        transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                         className="text-xl text-gray-600 mb-10 leading-relaxed"
                     >
                         מומחים באיתור נזילות, פתיחת סתימות ושיקום קווי ביוב בטכנולוגיות מתקדמות.
@@ -53,22 +53,26 @@ export const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
+                        transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
                         className="flex flex-col sm:flex-row gap-4 justify-center"
                     >
-                        <a
+                        <motion.a
                             href="tel:+972524580590"
-                            className="group bg-brand-lime text-brand-dark px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#c3e815] transition-all shadow-[0_20px_40px_-12px_rgba(210,248,36,0.5)] hover:shadow-[0_20px_40px_-12px_rgba(210,248,36,0.6)] flex items-center justify-center gap-2"
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ duration: 0.2 }}
+                            className="group bg-brand-lime text-brand-dark px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#c3e815] transition-colors shadow-[0_20px_40px_-12px_rgba(210,248,36,0.5)] hover:shadow-[0_20px_40px_-12px_rgba(210,248,36,0.6)] flex items-center justify-center gap-2"
                         >
                             הזמן שירות עכשיו
                             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                        </a>
-                        <a
+                        </motion.a>
+                        <motion.a
                             href="#services"
-                            className="px-8 py-4 rounded-xl font-bold text-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all text-gray-700 flex items-center justify-center"
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ duration: 0.2 }}
+                            className="px-8 py-4 rounded-xl font-bold text-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors text-gray-700 flex items-center justify-center"
                         >
                             צפה בשירותים שלנו
-                        </a>
+                        </motion.a>
                     </motion.div>
 
                     <div className="mt-16 pt-8 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:text-right">
