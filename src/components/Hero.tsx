@@ -1,10 +1,20 @@
 import React from 'react';
 import { ArrowLeft, MapPin, Clock, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
+import heroBg from '../assets/images/hero_bg.png';
 
 export const Hero = () => {
     return (
         <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src={heroBg}
+                    alt="Professional Plumber"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/40"></div>
+            </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto">
                     <motion.div

@@ -1,6 +1,12 @@
 import React from 'react';
 import { Droplets, Wrench, Search, Construction, Thermometer, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
+import serviceLeak from '../assets/images/service_leak.png';
+import serviceClog from '../assets/images/service_clog.png';
+import servicePressure from '../assets/images/service_pressure.png';
+import servicePipe from '../assets/images/service_pipe.png';
+import serviceHeater from '../assets/images/service_heater.png';
+import serviceInspection from '../assets/images/service_inspection.png';
 
 const services = [
     {
@@ -8,36 +14,42 @@ const services = [
         title: 'איתור נזילות',
         description: 'גילוי מוקד הנזילה באמצעות מצלמה תרמית וגז ללא הרס מיותר',
         icon: Search,
+        image: serviceLeak,
     },
     {
         id: 2,
         title: 'פתיחת סתימות',
         description: 'שימוש בציוד מתקדם לשחרור סתימות מורכבות בבית ובחצר',
         icon: Wrench,
+        image: serviceClog,
     },
     {
         id: 3,
         title: 'הגברת לחץ מים',
         description: 'פתרונות לזרימת מים חלשה, ניקוי אבנית ושדרוג משאבות',
         icon: Droplets,
+        image: servicePressure,
     },
     {
         id: 4,
         title: 'תיקון צנרת',
         description: 'החלפה ותיקון של צנרת ישנה, טיפול בפיצוצי צנרת חירום',
         icon: Construction,
+        image: servicePipe,
     },
     {
         id: 5,
         title: 'דודי שמש וחשמל',
         description: 'התקנה ותיקון של דודים, החלפת גופי חימום ופלאנג׳ים',
         icon: Thermometer,
+        image: serviceHeater,
     },
     {
         id: 6,
         title: 'בדק בית',
         description: 'בדיקה מקיפה למערכות האינסטלציה לפני כניסה לדירה חדשה',
         icon: Shield,
+        image: serviceInspection,
     },
 ];
 
@@ -75,15 +87,28 @@ export const Services = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="group p-8 rounded-2xl bg-gray-50 hover:bg-white border border-gray-100 hover:border-brand-lime/50 hover:shadow-xl hover:shadow-brand-lime/10 transition-all duration-300"
+                                className="group rounded-2xl bg-white border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-brand-lime/10 transition-all duration-300 flex flex-col h-full"
                             >
-                                <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-brand-lime">
-                                    <Icon className="w-6 h-6 text-gray-700 group-hover:text-brand-dark transition-colors" />
+                                <div className="h-48 overflow-hidden relative">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                    <div className="absolute bottom-4 right-4 z-20">
+                                        <div className="w-10 h-10 bg-brand-lime rounded-lg flex items-center justify-center shadow-lg">
+                                            <Icon className="w-5 h-5 text-brand-dark" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">
-                                    {service.description}
-                                </p>
+
+                                <div className="p-6 flex-1 flex flex-col">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                                    <p className="text-gray-600 leading-relaxed flex-1">
+                                        {service.description}
+                                    </p>
+                                </div>
                             </motion.div>
                         );
                     })}
