@@ -57,7 +57,7 @@ export const Hero = () => {
                         className="flex flex-col sm:flex-row gap-4 justify-center"
                     >
                         <a
-                            href="tel:050-1234567"
+                            href="tel:+972524580590"
                             className="group bg-brand-lime text-brand-dark px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#c3e815] transition-all shadow-[0_20px_40px_-12px_rgba(210,248,36,0.5)] hover:shadow-[0_20px_40px_-12px_rgba(210,248,36,0.6)] flex items-center justify-center gap-2"
                         >
                             הזמן שירות עכשיו

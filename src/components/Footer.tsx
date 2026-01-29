@@ -37,9 +37,9 @@ export const Footer = () => {
                         <h4 className="font-bold text-lg mb-6 text-gray-900">פרטי התקשרות</h4>
                         <ul className="space-y-4">
                             <li>
-                                <a href="tel:050-1234567" className="flex items-center gap-3 text-gray-600 hover:text-brand-dark transition-colors">
+                                <a href="tel:+972524580590" className="flex items-center gap-3 text-gray-600 hover:text-brand-dark transition-colors">
                                     <Phone className="w-5 h-5 text-brand-lime" />
-                                    <span className="font-medium">050-1234567</span>
+                                    <span className="font-medium">052-4580590</span>
                                 </a>
                             </li>
                             <li>

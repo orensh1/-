@@ -22,11 +22,11 @@ export const Navbar = () => {
                         <a href="#why-us" className="text-gray-600 hover:text-brand-dark font-medium transition-colors">למה אנחנו</a>
                         <a href="#contact" className="text-gray-600 hover:text-brand-dark font-medium transition-colors">צור קשר</a>
                         <a
-                            href="tel:050-1234567"
+                            href="tel:+972524580590"
                             className="bg-brand-dark text-white px-6 py-2.5 rounded-full font-medium hover:bg-gray-800 transition-all flex items-center gap-2 shadow-lg shadow-gray-900/20"
                         >
                             <Phone className="w-4 h-4" />
-                            <span>050-1234567</span>
+                            <span>052-4580590</span>
                         </a>
                     </div>
 
@@ -54,7 +54,7 @@ export const Navbar = () => {
                             <a onClick={() => setIsOpen(false)} href="#why-us" className="block text-lg font-medium text-gray-800">למה אנחנו</a>
                             <a onClick={() => setIsOpen(false)} href="#contact" className="block text-lg font-medium text-gray-800">צור קשר</a>
                             <a
-                                href="tel:050-1234567"
+                                href="tel:+972524580590"
                                 className="block w-full text-center bg-brand-lime text-brand-dark py-3 rounded-xl font-bold mt-4"
                             >
                                 חייג עכשיו
